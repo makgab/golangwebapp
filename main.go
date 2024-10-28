@@ -12,7 +12,7 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-    // séta the route for /
+    // set the route for /
     http.HandleFunc("/", helloHandler)
 
     // run server
