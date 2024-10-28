@@ -6,16 +6,16 @@ import (
     "net/http"
 )
 
-// Kezelő függvény a főoldalhoz
+// Handler function
 func helloHandler(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintf(w, "Hello, World!")
 }
 
 func main() {
-    // Beállítjuk a route-ot, hogy a "/" URL-t kezelje a helloHandler függvény
+    // séta the route for /
     http.HandleFunc("/", helloHandler)
 
-    // Indítjuk a web szervert a 8080-as porton
+    // run server
     fmt.Println("Starting server on :8080")
     if err := http.ListenAndServe(":8080", nil); err != nil {
         log.Fatal(err)
