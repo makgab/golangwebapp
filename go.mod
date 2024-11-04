@@ -1,3 +1,3 @@
-module demo01
+module webappdemo
 
 go 1.23.2
